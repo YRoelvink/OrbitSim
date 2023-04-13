@@ -104,7 +104,7 @@ for i, M in enumerate(M_MEO):
     h_MEO[i] = r_MEO[i] - Re
 
 # Plotting the altitude for a single orbit    
-fig, (ax1, ax2) = plt.subplots(1, 2, sharey="True", figsize=(10, 5))
+fig, (ax1, ax2) = plt.subplots(1, 2, sharey=True, figsize=(10, 5))
 ax1.plot(t[:max_orbit_index] / tau * 100, h_MEO[:max_orbit_index])
 ax1.set_xlabel("Time (% of orbital period)")
 ax1.set_xlim(0, 100)

@@ -59,7 +59,7 @@ X0 = np.concatenate((r0, v0), axis = None)
 sol_x, sol_y, sol_z, sol_r, sol_vx, sol_vy, sol_vz, sol_v = solve_twobody(X0, t, Reltol, Abstol)
 
 # Plot position magnitude over time
-fig, (ax1, ax2) = plt.subplots(2, 1, sharex='True')
+fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True)
 ax1.plot(t/3600, sol_r)
 ax1.set_ylabel("Radius (km)")
 ax1.set_xlim(0,24)
@@ -106,7 +106,7 @@ v_vec = [sol_vx, sol_vy, sol_vz]
 h = np.linalg.norm(np.cross(r_vec, v_vec, axis=0), axis=0)
 
 # Plot Specific Energies
-fig, (ax1, ax2) = plt.subplots(2, 1, sharex='True', figsize=(8, 5))
+fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(8, 5))
 ax1.plot(t/3600, Ek, label= 'Specific Kinetic Energy')
 ax1.plot(t/3600, Ep, label = 'Specific Potential Energy')
 ax1.plot(t/3600, Etot, label = 'Total Specific Energy')
